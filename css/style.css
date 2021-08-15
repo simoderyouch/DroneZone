@@ -1,0 +1,525 @@
+/*------------- font ----------------*/
+@font-face {
+  src: url(../font/FontsFree-Net-Proxima-Nova-Light.otf);
+  font-family: mainFont;
+}
+@font-face {
+  src: url(../font/FontsFree-Net-Proxima-Nova-Bold.otf);
+  font-family: mainFontbold;
+}
+/*---------------- container----------------*/
+.container {
+  margin: auto;
+  height: 100%;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*------------------------- global css -------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.up {
+  position: fixed;
+  z-index: 99;
+  bottom: 29px;
+  right: -34px;
+  background-color: #e06900;
+  background-image: linear-gradient(43deg, #cb0035, #e06900);
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+  text-align: center;
+}
+.up i {
+  color: white;
+  line-height: 30px;
+}
+.up.show {
+  right: 27px;
+}
+/*------------------------- start header -----------*/
+.main-page {
+  background-image: url(../assets/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main-page header {
+  height: 100px;
+}
+.main-page header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.main-page header .container .logo {
+  font-family: mainFontbold;
+  font-size: 20px;
+  color: #fff;
+}
+.main-page header .container .logo span {
+  font-family: mainFont;
+}
+.main-page header .container nav {
+  width: fit-content;
+}
+.main-page header .container nav ul a {
+  font-family: mainFont;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 11px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.main-page header .container nav ul a:last-child {
+  border-radius: 18px;
+  border: 1px solid #fff;
+  padding: 7px 13px;
+  transition: 0.3s;
+}
+.main-page header .container nav ul a:last-child:hover {
+  background-color: #fff;
+  color: #d32721;
+}
+.main-page header .container .bar {
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+i.fa-times {
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+@media (max-width: 719px) {
+  .main-page header .container nav.menu {
+    position: absolute;
+    top: -504px;
+    width: 100%;
+    height: 60vh;
+    left: 0;
+    z-index: 999;
+    transition: 0.3s;
+  }
+  .main-page header .container nav.menu.show {
+    top: 100%;
+  }
+  .main-page header .container .bar {
+    display: block;
+  }
+  .main-page header .container nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    background-color: #fff;
+  }
+  .main-page header .container nav ul a {
+    flex: 1;
+    color: #d32721;
+    line-height: 65px;
+  }
+  .main-page header .container nav ul a:last-child {
+    display: none;
+  }
+}
+/*---------------- end header -----------------*/
+/*------------------- start main centent -----------------------*/
+section.main-content {
+  text-align: center;
+  padding: 55px 0 0 0;
+  font-family: mainFont;
+  color: #fff;
+  width: 533px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+section.main-content .container {
+  width: 100%;
+}
+section.main-content h1 {
+  font-family: mainFontbold;
+  margin-bottom: 9px;
+  font-size: 39px;
+}
+section.main-content p {
+  opacity: 0.3;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+button {
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  background: none;
+  font-family: "mainFont";
+  padding: 12px 25px;
+  border-radius: 25px;
+}
+section.main-content button {
+  margin: 0 10px;
+}
+section.main-content button i {
+  margin-right: 13px;
+}
+section.main-content button.bk {
+  padding: 12px 41px;
+  background-color: #fff;
+  color: #d32721;
+}
+.scroll {
+  position: absolute;
+  bottom: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 20px;
+  animation: scrollmove 1s infinite;
+  animation-timing-function: ease;
+}
+.scroll + p {
+  font-family: mainFont;
+  font-weight: 100;
+  color: #fff;
+  opacity: 0.3;
+  font-size: 11px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 40px;
+}
+
+@keyframes scrollmove {
+  0% {
+    bottom: 62px;
+  }
+  50% {
+    bottom: 71px;
+  }
+  100% {
+    bottom: 62px;
+  }
+}
+@media (max-width: 544px) {
+  section.main-content h1 {
+    font-size: 30px;
+  }
+  section.main-content {
+    width: 100%;
+    padding: 134px 0 0 0;
+  }
+  section.main-content button {
+    margin: 9px auto;
+    display: block;
+  }
+}
+/*-------------------------- end main content -----------------*/
+/*------------------------ start features---------------*/
+.features {
+  background-color: #f6f6f6;
+}
+.features .container {
+  text-align: center;
+  padding-top: 124px;
+  padding-bottom: 84px;
+}
+.features .container .col-4 {
+  display: grid;
+  gap: 37px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.features .container .col-4 .col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.features .container .col-4 .col img {
+  width: 97px;
+}
+h1.special {
+  font-family: mainFontbold;
+  width: fit-content;
+  margin-bottom: 9px;
+  margin-top: 8px;
+
+  background-image: linear-gradient(43deg, #cb0035, #e06900);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.features .container .col-4 .col p {
+  font-family: mainFont;
+  color: #aaadb4;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.features .container button {
+  margin-top: 89px;
+}
+button.bluebtn {
+  background-color: #274799;
+  color: #fff;
+  padding: 12px 45px;
+}
+@media (max-width: 992px) {
+  .features .container button {
+    margin-top: 62px;
+  }
+  .features .container {
+    padding-top: 53px;
+    padding-bottom: 62px;
+  }
+}
+/*---------------------------- end features -----------------*/
+section.info {
+  width: 100%;
+  background-image: url(../assets/image-drone.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-size: 50%;
+}
+section.info .container {
+  padding-right: 20%;
+}
+section.info .container h1.special {
+  font-size: 38px;
+}
+section.info .container > p {
+  font-family: mainFont;
+  color: #aaadb4;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 53px;
+  width: 90%;
+}
+section.info .container .col-info {
+  display: flex;
+  gap: 40px;
+}
+section.info .container .col-info .row {
+  display: flex;
+  flex-direction: column;
+}
+section.info .container .col-info .row .col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+section.info .container .col-info .row .col span {
+  font-family: mainFontbold;
+  color: #3f4e76;
+  border: 2px solid #c7cde0;
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 49px;
+}
+section.info .container .col-info .text {
+  width: 80%;
+  color: #a7acbc;
+  font-family: mainFont;
+  line-height: 1.8;
+  font-size: 12px;
+}
+@media (max-width: 1000px) {
+  section.info {
+    background: none;
+  }
+  section.info .container {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 712px) {
+  section.info .container .col-info {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+/*------------------- end info section ---------------*/
+.portfolio {
+  display: flex;
+  align-items: center;
+}
+.portfolio .video {
+  text-align: center;
+  position: relative;
+  width: 50%;
+}
+.portfolio .video .play-btn {
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio .video .back {
+  width: 100%;
+}
+.portfolio .about {
+  width: 50%;
+  padding: 0 56px;
+  height: fit-content;
+}
+.portfolio .about P {
+  font-family: mainFont;
+  color: #aaadb4;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+@media (max-width: 774px) {
+  .portfolio {
+    flex-wrap: wrap;
+  }
+  .portfolio .video {
+    width: 100%;
+    order: 2;
+  }
+  .portfolio .about {
+    width: 100%;
+  }
+  .portfolio .about {
+    padding: 0 20px 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .about {
+    padding-right: 10%;
+  }
+}
+/*--------------------------------------- portfolio 2 -------------------*/
+@media (max-width: 774px) {
+  .portfolio .about.pad {
+    padding: 50px 20px 50px;
+  }
+}
+
+.portfolio .video.or {
+  order: 2;
+}
+@media (min-width: 1200px) {
+  .portfolio .about.pad {
+    padding: 0 64px 0 167px;
+  }
+}
+/*---------------------------------- start contact -------------------------*/
+section.contact {
+  background-image: url(../assets/contact-img.png);
+  text-align: center;
+  padding: 130px 0;
+  background-size: cover;
+  background-position: center;
+}
+section.contact h1 {
+  font-family: mainFontbold;
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: 37px;
+  margin-top: 0;
+}
+section.contact form {
+  position: relative;
+  width: 305px;
+  margin: auto;
+}
+
+section.contact form input {
+  padding: 12px 20px;
+  border-radius: 20px;
+  width: 240px;
+  background: none;
+  color: #fff;
+  outline: none;
+  border: 0.3px solid #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  font-family: mainFont;
+}
+
+.bac {
+  position: absolute;
+  height: 38px;
+  width: 240px;
+  background-color: #ffff;
+  z-index: 0;
+  opacity: 0.16;
+
+  border-radius: 20px;
+}
+section.contact form button {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  color: #d32721;
+  padding-left: 34px;
+  padding-right: 36px;
+  z-index: 2;
+}
+@media (max-width: 454px) {
+  section.contact h1 {
+    font-size: 26px;
+  }
+}
+/*---------------------- start footer ----------------*/
+footer .logo {
+  font-family: mainFontbold;
+  font-size: 30px;
+  color: #d32721;
+}
+footer ul a i {
+  color: #d32721;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin: 34px Auto;
+}
+footer .logo span {
+  font-family: mainFont;
+}
+footer {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding: 50px 0;
+}
+/*----------------------- end footer-------------------*/
