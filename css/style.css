@@ -54,6 +54,9 @@
 .up.show {
   right: 27px;
 }
+html {
+  scroll-behavior: smooth;
+}
 /*------------------------- start header -----------*/
 .main-page {
   background-image: url(../assets/back.png);
@@ -193,17 +196,19 @@ section.main-content button.bk {
   background-color: #fff;
   color: #d32721;
 }
-.scroll {
+.scroll-down {
   position: absolute;
   bottom: 62px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 20px;
+
   animation: scrollmove 1s infinite;
+  color: #fff;
+  font-size: 26px;
   animation-timing-function: ease;
 }
-.scroll + p {
+.s {
   font-family: mainFont;
   font-weight: 100;
   color: #fff;
