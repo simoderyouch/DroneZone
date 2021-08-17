@@ -202,7 +202,6 @@ section.main-content button.bk {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-
   animation: scrollmove 1s infinite;
   color: #fff;
   font-size: 26px;
